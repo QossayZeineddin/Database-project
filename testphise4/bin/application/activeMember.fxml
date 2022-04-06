@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="630.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.activeMemberController">
+   <children>
+      <Button layoutX="855.0" layoutY="570.0" mnemonicParsing="false" onAction="#handleBackAction" prefHeight="46.0" prefWidth="95.0" text="Back" textFill="#c61818">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <VBox layoutX="20.0" layoutY="20.0" prefHeight="481.0" prefWidth="930.0" spacing="10.0" AnchorPane.bottomAnchor="139.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="700.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="26.0" prefWidth="348.0" text="Active member in our Company" textAlignment="CENTER" textFill="#c71111">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TableView fx:id="TvActiveMember" editable="true" prefHeight="329.0" prefWidth="930.0">
+               <columns>
+                  <TableColumn fx:id="id" editable="false" prefWidth="100.0" text="ID" />
+                  <TableColumn fx:id="fromdate" onEditCommit="#changeFromDateCellEvent" prefWidth="231.0" text="From Date" />
+                  <TableColumn fx:id="todate" onEditCommit="#changeToDateCellEvent" prefWidth="210.0" text="To Date" />
+                  <TableColumn fx:id="categorieid" onEditCommit="#changecategorieIdCellEvent" prefWidth="195.0" text="Categorie ID" />
+                  <TableColumn fx:id="persoinid" onEditCommit="#changePersoinIdCellEvent" prefWidth="193.0" text="Persoin ID" />
+               </columns>
+            </TableView>
+            <HBox prefHeight="38.0" prefWidth="650.0" spacing="5.0">
+               <children>
+                  <DatePicker fx:id="fromDate" promptText="from date" />
+                  <DatePicker fx:id="toDate" promptText="to date" />
+                  <TextField fx:id="categorieId" alignment="CENTER" prefHeight="26.0" prefWidth="228.0" promptText="categorie id" />
+                  <TextField fx:id="persoinId" alignment="CENTER" prefHeight="26.0" prefWidth="247.0" promptText="persoin id" />
+               </children>
+            </HBox>
+            <VBox prefHeight="90.0" prefWidth="900.0" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addNewActiveMember" prefHeight="32.0" prefWidth="240.0" text="Add New active member" />
+                  <Button mnemonicParsing="false" onAction="#deleteSelectedActiveMember" prefHeight="33.0" prefWidth="242.0" text="Delete Selected active member" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+      <RadioButton fx:id="R2" layoutX="475.0" layoutY="524.0" mnemonicParsing="false" text="Before" textFill="#fc0909" />
+      <RadioButton fx:id="R1" layoutX="393.0" layoutY="524.0" mnemonicParsing="false" text="After" textFill="#ee1818" />
+      <RadioButton fx:id="R3" layoutX="550.0" layoutY="524.0" mnemonicParsing="false" text="Equal " textFill="#fc1616" />
+      <Button fx:id="select" layoutX="359.0" layoutY="550.0" mnemonicParsing="false" onAction="#selectQ" prefHeight="38.0" prefWidth="62.0" text="Select" />
+      <TextField fx:id="dateQ" layoutX="434.0" layoutY="551.0" prefHeight="33.0" prefWidth="171.0" promptText="Date yy-mm">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <Button fx:id="all" layoutX="692.0" layoutY="570.0" mnemonicParsing="false" onAction="#allQ" prefHeight="46.0" prefWidth="140.0" text="all active member" textFill="#e81010" />
+      <Label layoutX="390.0" layoutY="501.0" text="Member whose active end in: " textFill="#e41010">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="515.0" text="Member whoes name is:" textFill="#f21111">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameQ" alignment="CENTER" layoutX="93.0" layoutY="549.0" prefHeight="38.0" prefWidth="171.0" promptText="Name" />
+      <Button fx:id="name" layoutX="14.0" layoutY="549.0" mnemonicParsing="false" onAction="#selectName" prefHeight="38.0" prefWidth="67.0" text="Select" textFill="#eb1212" />
+   </children>
+</AnchorPane>

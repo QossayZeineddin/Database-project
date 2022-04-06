@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="718.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.medicalEntityController">
+   <children>
+      <Button layoutX="852.0" layoutY="661.0" mnemonicParsing="false" onAction="#handleBackAction" prefHeight="46.0" prefWidth="108.0" text="Back" textFill="#c61818" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="852.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="661.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <VBox layoutX="20.0" layoutY="20.0" prefHeight="578.0" prefWidth="950.0" spacing="10.0" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="700.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="26.0" prefWidth="366.0" text="Medical Entity in our Company" textAlignment="CENTER" textFill="#c71111">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TableView fx:id="TvmedicalEntity" editable="true" prefHeight="414.0" prefWidth="897.0">
+               <columns>
+                  <TableColumn fx:id="id" editable="false" prefWidth="84.0" text="ID" />
+                  <TableColumn fx:id="address" onEditCommit="#changeaddressCellEvent" prefWidth="189.0" text="address" />
+                  <TableColumn fx:id="mname" onEditCommit="#changemNameCellEvent" prefWidth="299.0" text="M - Name" />
+                  <TableColumn fx:id="phonenumber" onEditCommit="#changePhoneNumberCellEvent" prefWidth="201.0" text="phone number" />
+                  <TableColumn fx:id="medicalentitytypeId" onEditCommit="#changeMedicalEntityTypeIdCellEvent" prefWidth="176.0" text="Medical Entity Type Id" />
+               </columns>
+            </TableView>
+            <HBox prefHeight="38.0" prefWidth="650.0" spacing="5.0">
+               <children>
+                  <TextField fx:id="Adress" prefHeight="26.0" prefWidth="177.0" promptText="Adress" />
+                  <TextField fx:id="MName" alignment="CENTER" prefHeight="26.0" prefWidth="301.0" promptText="M-Name" />
+                  <TextField fx:id="PhoneNumber" alignment="CENTER" prefHeight="26.0" prefWidth="204.0" promptText="PhoneNumber" />
+                  <TextField fx:id="MedicalEntityTypeId" alignment="CENTER" prefHeight="26.0" prefWidth="213.0" promptText="MedicalEntityTypeId" />
+               </children>
+            </HBox>
+            <VBox prefHeight="45.0" prefWidth="950.0" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addNewmedicalEntity" prefHeight="32.0" prefWidth="210.0" text="Add New Medical Entity" />
+                  <Button mnemonicParsing="false" onAction="#deleteSelectedmedicalEntity" prefHeight="33.0" prefWidth="210.0" text="Delete Selected Medical Entity" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+      <Button fx:id="select" layoutX="14.0" layoutY="636.0" mnemonicParsing="false" onAction="#select" prefHeight="33.0" prefWidth="59.0" text="Select" />
+      <TextField fx:id="adrs" alignment="CENTER" layoutX="73.0" layoutY="637.0" prefHeight="32.0" prefWidth="171.0" promptText="Address" />
+      <Button fx:id="all" layoutX="624.0" layoutY="637.0" mnemonicParsing="false" onAction="#allM" prefHeight="33.0" prefWidth="146.0" text="All medical Entity" textFill="#fc1f1f">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="306.0" layoutY="607.0" prefHeight="16.0" prefWidth="237.0" text="Select all  medicals type of: " textFill="#f51212">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="selectN" layoutX="299.0" layoutY="637.0" mnemonicParsing="false" onAction="#selectNm" prefHeight="33.0" prefWidth="62.0" text="Select" />
+      <TextField fx:id="mn" layoutX="369.0" layoutY="636.0" prefHeight="33.0" prefWidth="183.0" promptText="hospital,pharmacy ,doctor...">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="10.0" layoutY="607.0" text="Select Medicl Entity in Address:" textFill="#a81414">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

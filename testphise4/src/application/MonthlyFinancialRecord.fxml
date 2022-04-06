@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="608.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MonthlyFinancialRecordController">
+   <children>
+      <Button layoutX="514.0" layoutY="545.0" mnemonicParsing="false" onAction="#handleBackAction" prefHeight="47.0" prefWidth="176.0" text="Back to menu" textFill="#c61818" AnchorPane.bottomAnchor="16.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="r1" layoutX="112.0" layoutY="568.0" mnemonicParsing="false" onAction="#R1" text="Back to yearly record" textFill="#ee1616">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <VBox layoutX="20.0" layoutY="20.0" prefHeight="515.0" prefWidth="900.0" spacing="10.0" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="700.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="26.0" prefWidth="298.0" text="Financial Record monthly" textAlignment="CENTER" textFill="#c71111">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TableView fx:id="TvRecord" editable="true" prefHeight="547.0" prefWidth="930.0">
+               <columns>
+                  <TableColumn fx:id="years" editable="false" prefWidth="195.0" text="years - month" />
+                  <TableColumn fx:id="CompanyPayment" editable="false" prefWidth="163.0" text="Company Payment $" />
+                  <TableColumn fx:id="MemberPayment" editable="false" prefWidth="326.0" text="Member Payment $" />
+               </columns>
+            </TableView>
+            <VBox prefHeight="90.0" prefWidth="900.0" spacing="5.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

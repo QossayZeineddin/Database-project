@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="657.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FinancialRecordController">
+   <children>
+      <Button layoutX="817.0" layoutY="596.0" mnemonicParsing="false" onAction="#handleBackAction" prefHeight="47.0" prefWidth="107.0" text="Back" textFill="#c61818" AnchorPane.bottomAnchor="14.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <VBox layoutX="20.0" layoutY="20.0" prefHeight="356.0" prefWidth="900.0" spacing="10.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="700.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="26.0" prefWidth="298.0" text="Financial Record yearly" textAlignment="CENTER" textFill="#c71111">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TableView fx:id="TvRecord" editable="true" prefHeight="547.0" prefWidth="930.0">
+               <columns>
+                  <TableColumn fx:id="years" editable="false" prefWidth="100.0" text="years" />
+                  <TableColumn fx:id="CompanyPayment" editable="false" prefWidth="189.0" text="Company Payment $" />
+                  <TableColumn fx:id="MemberPayment" editable="false" prefWidth="225.0" text="Member Payment $" />
+                  <TableColumn fx:id="CatrgouriyCost" editable="false" prefWidth="211.0" text="Catrgouriys Cost $" />
+                  <TableColumn fx:id="TotalMoney" editable="false" prefWidth="204.0" text="total Money $ " />
+               </columns>
+            </TableView>
+            <VBox prefHeight="90.0" prefWidth="900.0" spacing="5.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Text fx:id="txit" strokeType="OUTSIDE" strokeWidth="0.0" text="Net Profit is:" wrappingWidth="82.7294921875" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <RadioButton fx:id="r1" layoutX="48.0" layoutY="608.0" mnemonicParsing="false" onAction="#handleMonthlyAction" text="to see monthly recorad" textFill="#ee1616">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </RadioButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.4288747346072187" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.loginController">
+  <items>
+    <AnchorPane prefHeight="718.0" prefWidth="536.0">
+         <children>
+            <ImageView fitHeight="511.0" fitWidth="535.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="287.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@health-insurance-requirements-in-usa.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="363.0" fitWidth="560.0" layoutX="-9.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@helth.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Button layoutX="269.0" layoutY="504.0" mnemonicParsing="false" onAction="#handleMenuAction" prefHeight="62.0" prefWidth="189.0" text="Login" textAlignment="CENTER" textFill="#eb0000" AnchorPane.leftAnchor="269.0" AnchorPane.rightAnchor="268.0" AnchorPane.topAnchor="504.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="150.0" layoutY="312.0" prefHeight="44.0" prefWidth="256.0" text="Password" textFill="#801313" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="312.0">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="19.0" layoutY="20.0" prefHeight="93.0" prefWidth="688.0" text="Welcome To Health insurance company" textFill="#b70404" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="142.0" prefHeight="62.0" prefWidth="444.0" text="User Name " textFill="#e40000" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="132.0" AnchorPane.topAnchor="142.0">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameTextField" alignment="CENTER" layoutX="79.0" layoutY="232.0" prefHeight="38.0" prefWidth="317.0" promptText="Enter the Admin name" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="232.0">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordTextField" alignment="CENTER" layoutX="173.0" layoutY="378.0" prefHeight="45.0" prefWidth="324.0" promptText="Enter Admin password" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="378.0">
+               <font>
+                  <Font size="24.0" />
+               </font></PasswordField>
+            <Label fx:id="message" alignment="CENTER" layoutX="219.0" layoutY="460.0" prefHeight="44.0" prefWidth="288.0" textFill="#b81714" wrapText="true" AnchorPane.leftAnchor="219.0" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="460.0" />
+            <Button layoutX="621.0" layoutY="650.0" mnemonicParsing="false" onAction="#handleExitAction" prefHeight="46.0" prefWidth="84.0" text="Exit" textFill="#3e1eb2">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Label layoutX="33.0" layoutY="602.0" text="Eng.Ameena Jadallah    1171018" textFill="#ff0404">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="673.0" text="Eng. Qossay Zeinelddin  1180235" textFill="#f80101">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="640.0" text="Eng.Amr shayeb           1171042" textFill="#e12323">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+  </items>
+</SplitPane>

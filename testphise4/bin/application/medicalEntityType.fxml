@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="534.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.medicalEntityTypeController">
+   <children>
+      <Button layoutX="534.0" layoutY="494.0" mnemonicParsing="false" onAction="#handleBackAction" prefHeight="46.0" prefWidth="123.0" text="Back" textFill="#c61818" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="534.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="484.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <VBox layoutX="20.0" layoutY="20.0" prefHeight="356.0" prefWidth="900.0" spacing="10.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="700.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="26.0" prefWidth="415.0" text="medical Entity Type in our company" textAlignment="CENTER" textFill="#c71111">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TableView fx:id="TVmedicalEntityType" prefHeight="303.0" prefWidth="930.0">
+               <columns>
+                  <TableColumn fx:id="id" editable="false" prefWidth="154.0" text="ID" />
+                  <TableColumn fx:id="mETName" onEditCommit="#changemETNameCellEvent" prefWidth="497.0" text="medical Entity Type name" />
+               </columns>
+            </TableView>
+            <HBox prefHeight="38.0" prefWidth="650.0" spacing="5.0">
+               <children>
+                  <TextField fx:id="metname" alignment="CENTER" prefHeight="31.0" prefWidth="368.0" promptText="medical Entity Type name" />
+               </children>
+            </HBox>
+            <VBox prefHeight="90.0" prefWidth="900.0" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addNewMedicalEntityType" prefHeight="32.0" prefWidth="263.0" text="Add New medical Entity Type" />
+                  <Button mnemonicParsing="false" onAction="#deleteSelectedMedicalEntityType" prefHeight="33.0" prefWidth="262.0" text="Delete Selected medical Entity Type" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
